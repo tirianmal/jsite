@@ -1,0 +1,149 @@
+// Place all the styles related to the jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+td.job-posting, td.apply {
+    padding:30px;
+}
+
+td.apply {
+   width: 30%;
+}
+
+nav.navbar {
+    background-color: #00597b;
+    border-color: #00415a;
+    min-height: 50px;
+    min-width: 768px;
+    display: block;
+}
+.navbar-header {
+    float: left;
+
+}
+
+.navbar-logo {
+    text-decoration: none;
+    color: #92c664;
+}
+
+.navbar-search {
+    text-decoration: none;
+    float:left;
+    color: white;
+    margin: 10px;
+}
+
+input.search {
+    background-color: #92c664;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #eeeeee;
+}
+
+input {
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.navbar-right {
+    text-decoration: none;
+    float:right;
+    display: table;
+    color: #eeeeee;
+}
+
+ul.navbar-right {
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+li.navbar-right {
+    text-decoration: none;
+}
+a.navbar {
+    text-decoration: none;
+    color: #eeeeee;    
+}
+
+.container {
+    width: 1100px;
+    margin-left:  auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.jobs-list {
+    position: relative;
+    width: 75%;
+    float: left;
+}
+
+span.job-heading, span.job-company, span.job-details {
+    display: block;
+}
+
+.jobs-list > a {
+    text-decoration: none;
+}
+
+.job-company {
+    color: #92c664;
+}
+
+span.job-title {
+    display: inline;
+    text-decoration: underline;
+}
+
+div.job-title {
+    padding-top: 10px; 
+    padding-bottom:10px;
+}
+
+span.job-posted {
+    color: #999999;
+}
+
+span.job-description {
+    color:#222222;
+}
+
+.aux-col {
+    position: relative;
+    width: 25%;
+    float:left;
+    background-color: #eeeeee;
+    
+}
+
+.aux-title {
+    padding: 10px 15px;
+    font-size: 24px;
+    line-height: 1.1em;
+}
+
+.aux-listing li {
+    font-size: 22px;
+    line-height: 1.4;
+    display: list-item;
+    list-style: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 1px dotted #999999;
+}
+
+
+.red {
+    background-color: red;
+}

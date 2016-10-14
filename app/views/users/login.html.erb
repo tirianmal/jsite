@@ -1,0 +1,11 @@
+      <div class="navbar-search" style="color:#222222;">
+        <%= form_tag({}, {:autocomplete => 'off'}) do %>
+          <%= label_tag("name") %>
+          <%= text_field_tag(:name,)   %>
+          <br>
+          <%= label_tag("password") %>
+          <%= text_field_tag(:password,)  %>
+          <br>
+          <%= submit_tag("Login", :class => "search") %>
+        <% end %>   
+      </div>

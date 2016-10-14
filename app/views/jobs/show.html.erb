@@ -1,0 +1,65 @@
+<% posted = Time.at(@job['posted'].to_i) %>
+<table>
+  <tbody>
+    <tr>
+      <td class="job-posting">
+        <div class="job-title">
+          <b style="text-decoration: underline"><%= "#{@job['title']}" %></b>
+          <br>
+          <span>
+            <span class="job-company"><%= "#{@job['company']}" %></span>
+            &nbsp-&nbsp
+            <span class="job-location"><%= "#{@job['city']}, #{@job['state']}" %></span>
+          </span>
+        </div>
+        <table>
+          <tbody>
+            <tr><td>
+                <span class="job-description">
+                  <%= "#{@job['body']}" %>
+                </span>
+              </td>
+            </tr>
+            <tr><td>
+                <span>
+                  <span class="job-source">localhost:3000
+                  </span>
+                  &nbsp-&nbsp
+                  <span class="job-posted">
+                    <%= "#{time_ago_in_words(posted)} ago" %>
+                  </span>
+                  &nbsp-&nbsp
+                  <a href="/">save job</a>
+                </span>
+              </td>
+            </tr>
+            <tr><td>
+              <%= render :partial => 'apply_now', :locals => {:job => @job} %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td class="apply">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <%= render :partial => 'apply_now', :locals => {:job => @job} %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <hr>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Follow ...
+              </td>
+            </tr>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

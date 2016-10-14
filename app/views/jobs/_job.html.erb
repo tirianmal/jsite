@@ -1,0 +1,28 @@
+<% posted = Time.at(job['posted'].to_i) %>
+<a href=<%= "jobs/#{job['id']}" %> target="_blank" class="popup" onclick="return popupJob(this);" >
+<div style="display:block; margin-bottom:15px">
+  <span class="job-heading">
+    <span class="job-title">
+      <%= "#{job['title']}" %>
+    </span>
+    &nbsp; -
+    <span class="job-source">posted on localhost:3000
+    </span>
+  </span>
+  <span class="job-company">
+    <%= "#{job['company']}" %>
+  </span>
+  <span class="job-details">
+    <span class="job-posted">
+      <%= posted.to_formatted_s(:month_day_year) %>
+    </span>
+    &nbsp; -
+    <span class="job-description">
+      <%= "#{job['body'].truncate(70)}" %>
+    </span>
+    <span>&nbsp;more
+    </span>
+  </span>
+</div>
+</a>
+

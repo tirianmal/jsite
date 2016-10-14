@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Welcome to My Job Site!</h1>
+  <div class="jobs-list">
+  <% if @jobs.empty? %>
+    <h3>No jobs in Cambridge, MA matched</h3>
+  <% else %>
+    <h3><%= "#{@jobs.size}" %> jobs in Cambridge, MA matched</h3>
+    <%= render :partial => 'job', :collection => @jobs %>
+  <% end %>
+  </div>
+  <div class="aux-col">
+    <%= render :partial => 'area_listing' %>
+  </div>
+</div>

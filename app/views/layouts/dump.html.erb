@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en">
+<head>
+  <title>Jobsite</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'jobsinsider', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="navbar-header">
+        <a href="/" class="navbar-logo">MyJobSite</a>
+      </div>
+      <div class="navbar-search">
+        <form>
+        </form>
+        <ul class="navbar navbar-right">
+          <li>
+            <a href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="content">
+    <%= yield %>
+  </div>
+  <footer>
+  </footer>
+
+</body>
+</html>

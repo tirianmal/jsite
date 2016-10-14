@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobsite</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-logo"><h1>MyJobSite</h1></a>
+        </div>
+        <div class="navbar-search">
+          <%= form_tag("/", method: "get", remote: true) do %>
+            <%= text_field_tag(:q,)   %>
+            <%= text_field_tag(:l,)   %>
+            <%= submit_tag("Search", :class => "search") %>
+          <% end %>   
+        </div>
+        <div class"navbar navbar-right">
+          <ul class="navbar-right">
+            <li class="navbar-right">
+              <a href="users/login" class="navbar login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="content">
+    <%= yield %>
+  </div>
+  <footer>
+  </footer>
+
+</body>
+</html>
